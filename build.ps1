@@ -118,6 +118,7 @@ if ($ClearOnly.IsPresent) {
 
 $giraffeRazor = ".\src\Giraffe.Razor\Giraffe.Razor.fsproj"
 $sampleApp    = ".\samples\GiraffeRazorSample\GiraffeRazorSample.fsproj"
+$sampleAppMiniProfiler    = ".\samples\GiraffeRazorSampleWithMiniProfiler\GiraffeRazorSampleWithMiniProfiler.fsproj"
 
 Update-AppVeyorBuildVersion $giraffeRazor
 Test-Version $giraffeRazor
@@ -137,6 +138,8 @@ if (!$ExcludeSamples.IsPresent -and !$Run.IsPresent)
 
     dotnet-restore $sampleApp
     dotnet-build   $sampleApp
+    dotnet-restore $sampleAppMiniProfiler
+    dotnet-build   $sampleAppMiniProfiler
 }
 
 if ($Run.IsPresent)

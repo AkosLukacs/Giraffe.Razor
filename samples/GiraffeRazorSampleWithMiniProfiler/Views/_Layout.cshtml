@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GiraffeRazorSampleWithMiniProfiler - A Razor sample application for Giraffe with MiniProfiler</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+<body>
+    <h2>Giraffe & MiniProfiler</h2>
+    <p>Look at the top right for profiler results!</p>
+
+    @RenderBody()
+
+    <p>
+        <a href="https://miniprofiler.com/dotnet/AspDotNetCore">MiniProfiler docs for ASP.NET Core are here</a>
+    </p>
+    <mini-profiler position="@RenderPosition.Right" show-time-with-children="true" />
+</body>
+</html>

@@ -1,0 +1,13 @@
+@{
+    Layout = "_Layout";
+}
+<div>
+  <ul>
+    <li><a href="/">Home...</a></li>
+    <li><a href="/slowserver/100">Handling this request is slow...</a></li>
+    <li><a href="/slowserver/1000">Handling this request is even slower...</a></li>
+    <li><a href="/slowview">Rendering this view is slow...</a></li>
+    <li><a href="/mini-profiler-resources/results-index">Show all profiling sessions</a></li>
+    <li><button type="button" onclick="fetch('/')">fetch!</button> (should send an ajax request, and the result should show up in the profiler list)</li>
+  </ul>
+</div>
